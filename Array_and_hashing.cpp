@@ -96,3 +96,47 @@
 //         }
 //         return answer;
 //     }
+
+/*Leetcode-238. Product of Array Except Self*/
+//! O(n) tc and sc solution
+
+// vector<int> productExceptSelf(vector<int>& nums) {
+//         int n = nums.size();
+//         vector<int>prefix(n);
+//         prefix[0]=1;
+//         for(int i=1;i<n;i++)
+//         {
+//            prefix[i] = prefix[i-1]*nums[i-1];
+//         }
+//         vector<int>suffix(n);
+//         suffix[n-1]=1;
+//         for(int i=n-2;i>=0;i--)
+//         {
+//             suffix[i] = suffix[i+1]*nums[i+1];
+//         }
+//         vector<int>answer(n);
+//         for(int i=0;i<n;i++)
+//         {
+//             answer[i] = prefix[i]*suffix[i];
+//         }
+//         return answer;
+//     }
+
+//? TC-O(n) sc-O(1)
+// vector<int> productExceptSelf(vector<int>& nums) {
+//         int n = nums.size();
+//         vector<int>answer(n);
+//         int prefixprod=1;
+//         for(int i=0;i<n;i++)
+//         {
+//             answer[i]=prefixprod;
+//             prefixprod*=nums[i];
+//         }
+//         int suffixprod=1;
+//         for(int i=n-1;i>=0;i--)
+//         {
+//             answer[i]*=suffixprod;
+//             suffixprod*=nums[i];
+//         }
+//         return answer;
+//     }
