@@ -74,3 +74,25 @@
 //     }
 
 //? Optimal or Better Approach
+// vector<int> topKFrequent(vector<int>& nums, int k) {
+//         int n = nums.size();
+//         unordered_map<int,int>mpp;
+//         for(auto it : nums){
+//             mpp[it]++;
+//         }
+//         vector<vector<int>>bucket(n+1);
+//         for(auto it : mpp)
+//         {
+//             bucket[it.second].push_back(it.first);
+//         }
+//         vector<int>answer;
+//         for(int i=bucket.size()-1;i>=0;i--)
+//         {
+//             for(auto it : bucket[i])
+//             {
+//                 answer.push_back(it);
+//                 if(answer.size()==k) return answer;
+//             }
+//         }
+//         return answer;
+//     }
