@@ -50,3 +50,27 @@
 //         }
 //         return answer;
 //     }
+
+/*Leecode-347 Top K Frequent Elements*/
+
+//! Brute Force Approach
+//  vector<int> topKFrequent(vector<int>& nums, int k) {
+//         int n = nums.size();
+//         unordered_map<int,int>mpp;
+//         for(auto it : nums){
+//             mpp[it]++;
+//         }
+//         vector<pair<int,int>>freq(mpp.begin(),mpp.end());
+//         sort(freq.begin(),freq.end(),[](pair<int,int>a,
+//         pair<int,int>b){
+//             return a.second>b.second;
+//         });
+//         vector<int>answer;
+//         for(int i=0;i<k;i++)
+//         {
+//           answer.push_back(freq[i].first);
+//         }
+//         return answer;
+//     }
+
+//? Optimal or Better Approach
