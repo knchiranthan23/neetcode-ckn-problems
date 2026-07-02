@@ -107,3 +107,26 @@
 //         }
 //         return maxarea;
 //     }
+
+/*Leetcode 42. Trapping Rain Water*/
+//! BF Approach
+// int trap(vector<int>& height) {
+//         int n=height.size();
+//         int answer=0;
+//         for(int i=1;i<n-1;i++)
+//         {
+//             int leftmax=0;
+//             for(int j=0;j<=i;j++)
+//             {
+//                 leftmax = max(leftmax,height[j]);
+//             }
+//             int rightmax=0;
+//             for(int k=i;k<n;k++)
+//             {
+//                 rightmax = max(rightmax,height[k]);
+//             }
+//             answer+=min(leftmax,rightmax)-height[i];
+//         }
+//         return answer;
+//     }
+
