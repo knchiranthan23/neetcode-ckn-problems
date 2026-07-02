@@ -69,3 +69,21 @@
 //         }
 //         return answer;
 //     }
+
+/*11. Container With Most Water*/
+//!Brute Force Approach
+// int maxArea(vector<int>& height) {
+//         int maxarea=0;
+//         int n = height.size();
+//         for(int i=0;i<n-1;i++)
+//         {
+//             for(int j=i+1;j<n;j++)
+//             {
+//               int width = j-i;
+//               int hght = min(height[i],height[j]);
+//               int area = width*hght;
+//               maxarea = max(maxarea,area);
+//             }
+//         }
+//         return maxarea;
+//     }
