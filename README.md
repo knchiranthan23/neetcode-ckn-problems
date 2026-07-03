@@ -15,20 +15,6 @@ This repository contains my solutions to NeetCode problems implemented in **C++*
 
 ---
 
-# 📚 Arrays & Hashing
-
-| Status | Problem |
-|:------:|---------|
-| ✅ | Contains Duplicate |
-| ⬜ | Valid Anagram |
-| ⬜ | Two Sum |
-| ⬜ | Group Anagrams |
-| ⬜ | Top K Frequent Elements |
-| ⬜ | Product of Array Except Self |
-| ⬜ | Valid Sudoku |
-| ⬜ | Longest Consecutive Sequence |
-
-
 ---
 
 ## 🛠️ Language
