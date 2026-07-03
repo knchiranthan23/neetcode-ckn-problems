@@ -1,5 +1,5 @@
 /*Leetcode 20.Valid Parentheses*/
-//! Brute Force Method
+//!Method
 // bool isValid(string s) {
 //        stack<char>st;
 //        for(char ch : s)
