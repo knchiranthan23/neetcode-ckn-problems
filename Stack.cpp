@@ -18,3 +18,31 @@
 //        return st.empty(); 
 //     }
 
+/*Leetcode 155.MinStack*/
+//? Brute Force Approach
+//  MinStack() {
+//     }
+//     stack<int>st;
+//     void push(int value) {
+//         st.push(value);
+//     }
+    
+//     void pop() {
+//         st.pop();
+//     }
+    
+//     int top() {
+//       return st.top();
+//     }
+//     int getMin() {
+//         stack<int>temp=st;
+//         int minValue=INT_MAX;
+//         while(!temp.empty())
+//         {
+//             minValue=min(minValue,temp.top());
+//             temp.pop();
+//         }
+//         return minValue;
+//     }
+
+//todo : Optimal Approach
