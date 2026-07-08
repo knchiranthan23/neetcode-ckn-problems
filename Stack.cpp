@@ -261,3 +261,38 @@
 //         }
 //         return fleetcount;
 //     }
+
+/*84. Largest Rectangle in Histogram*/
+//! Brute Force Approach
+// int largestRectangleArea(vector<int>& heights) {
+//         int n = heights.size();
+//         int maxarea=INT_MIN;
+//         for(int i=0;i<n;i++)
+//         {
+//            int width=1;
+//            for(int j=i-1;j>=0;j--)
+//            {
+//              if(heights[j]>=heights[i])
+//              {
+//                 width++;
+//              }
+//              else{
+//                 break;
+//              }
+//            }
+//            for(int k=i+1;k<n;k++)
+//            {
+//               if(heights[k]>=heights[i])
+//               {
+//                  width++;
+//               }
+//               else{
+//                  break;
+//               }
+//            }
+//            int area=width*heights[i];
+//            maxarea=max(maxarea,area);
+//         }
+//         return maxarea;
+//     }
+
