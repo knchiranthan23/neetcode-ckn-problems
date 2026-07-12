@@ -190,3 +190,51 @@
 //          }
 //          return true;
 //     }
+
+/*Given a integer n build a spiral matrix with rows and cols size 2*n-1*/
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int size=2*n-1;
+//     vector<vector<int>>ans(size,vector<int>(size));
+//     int left=0,right=size-1;
+//     int top=0,bottom=size-1;
+//     while(left<=right && top<=bottom)
+//         {
+//             for(int i=left;i<=right;i++)
+//             {
+//                ans[top][i]=n;
+//             }
+//             top++;
+//             for(int i=top;i<=bottom;i++)
+//             {
+//                ans[i][right]=n;
+//             }
+//             right--;
+//             if(top<=bottom){
+//             for(int i=right;i>=left;i--)
+//             {
+//                 ans[bottom][i]=n;
+//             }
+//             bottom--;
+//             }
+//             if(left<=right){ 
+//             for(int i=bottom;i>=top;i--)
+//             {
+//                 ans[i][left]=n;
+//             }
+//             left++;
+//             }
+//             n--;
+//         }
+//         for(int i=0;i<size;i++)
+//         {
+//             for(int j=0;j<size;j++)
+//             {
+//                 cout<<ans[i][j]<<" ";
+//             }
+//             cout<<"\n";
+//         }
+//         return 0;
+//   }
