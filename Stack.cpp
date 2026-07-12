@@ -295,4 +295,110 @@
 //         }
 //         return maxarea;
 //     }
+//todo: Optimal Apprach
+// int largestRectangleArea(vector<int>& heights) {
+//         int n = heights.size();
+//         vector<int>left(n);
+//         vector<int>right(n);
+//         stack<int>st;
+//         for(int i=0;i<n;i++)
+//         {
+//             while(!st.empty() && heights[st.top()]>=heights[i])
+//             {
+//                 st.pop();
+//             }
+//             if(st.empty())
+//             {
+//                 left[i]=-1;
+//             }
+//             else{
+//                 left[i]=st.top();
+//             }
+//             st.push(i);
+//         }
+//         while(!st.empty())
+//         {
+//             st.pop();
+//         }
+//         for(int i=n-1;i>=0;i--)
+//         {
+//             while(!st.empty() && heights[st.top()]>=heights[i])
+//             {
+//                 st.pop();
+//             }
+//             if(st.empty())
+//             {
+//                 right[i]=n;
+//             }
+//             else{
+//                 right[i]=st.top();
+//             }
+//             st.push(i);
+//         }
+//         int maxarea=INT_MIN;
+//         for(int i=0;i<n;i++)
+//         {
+//           int width = right[i]-left[i]-1;
+//           int area = width*heights[i];
+//           maxarea=max(maxarea,area);
+//         }
+//         return maxarea;
+//     }
 
+/*85. Maximal Rectangle*/
+//todo:Optimal approach
+// int largestRectangleArea(vector<int>& heights) {
+//         stack<int> st;
+//         int maxArea = 0;
+//         heights.push_back(0);
+
+//         for (int i = 0; i < heights.size(); i++) {
+//             while (!st.empty() && heights[i] < heights[st.top()]) {
+//                 int height = heights[st.top()];
+//                 st.pop();
+
+//                 int width = st.empty() ? i : i - st.top() - 1;
+//                 maxArea = max(maxArea, height * width);
+//             }
+//             st.push(i);
+//         }
+//         return maxArea;
+//     }
+//     int maximalRectangle(vector<vector<char>>& matrix) {
+//         if (matrix.empty()) return 0;
+//         // Get number of columns
+//         int m = matrix[0].size();
+//         vector<int> height(m, 0);
+//         int maxArea = 0;
+//         for (auto& row : matrix) {
+
+//             for (int i = 0; i < m; i++) {
+//                 if (row[i] == '1') height[i]++;
+//                 else height[i] = 0;
+//             }
+//             maxArea = max(maxArea, largestRectangleArea(height));
+//         }
+
+//         return maxArea;
+//     }
+
+/*Leetcode 503. Next Greater Element II*/
+//! Brute Force Approach
+//  vector<int> nextGreaterElements(vector<int>& nums) {
+//         int n = nums.size();
+//         vector<int>ans(n,-1);
+//         for(int i=0;i<n;i++)
+//         {
+//             int j=(i+1)%n;
+//             while(j!=i)
+//             {
+//                 if(nums[j]>nums[i])
+//                 {
+//                     ans[i]=nums[j];
+//                     break;
+//                 }
+//                 j=(j+1)%n;
+//             }
+//         }
+//         return ans;
+//     }
