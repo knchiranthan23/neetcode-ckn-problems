@@ -402,3 +402,54 @@
 //         }
 //         return ans;
 //     }
+
+//todo: Optimal Approach
+//  vector<int> nextGreaterElements(vector<int>& nums) {
+//         int n = nums.size();
+//         vector<int>ans(n);
+//         stack<int>st;
+//         for(int i=2*n-1;i>=0;i--)
+//         {
+//             if(i<n){
+//                 while(!st.empty() && st.top()<=nums[i])
+//                 {
+//                     st.pop();
+//                 }
+//                 if(st.empty())
+//                 {
+//                     ans[i]=-1;
+//                 }
+//                 else{
+//                     ans[i]=st.top();
+//                 }
+//                 st.push(nums[i%n]);
+//             }
+//             else
+//             {
+//                 while(!st.empty() && st.top()<=nums[i%n])
+//                 {
+//                     st.pop();
+//                 }
+//                 st.push(nums[i%n]);
+//             }
+//         }
+//         return ans;
+//     }
+
+/*907. Sum of Subarray Minimums*/
+//!Brute Force Approach
+// int sumSubarrayMins(vector<int>& arr) {
+//         int n = arr.size();
+//         long long sum = 0;
+//         for(int i=0;i<n;i++)
+//         {
+//             int minval = INT_MAX;
+//             for(int j=i;j<n;j++)
+//             {
+//                 minval = min(minval,arr[j]);
+//                 sum+=minval;
+//             }
+//         }
+//         int mod = 1e9+7;
+//         return (long long)(sum%mod);
+//     }
