@@ -532,3 +532,22 @@
         }
         return ans;
 }*/
+
+/*2104. Sum of Subarray Ranges*/
+//! Brute Force Approach
+/*long long subArrayRanges(vector<int>& nums) {
+        long long sum=0;
+        int n = nums.size();
+        for(int i=0;i<n;i++)
+        {
+            int maxy = INT_MIN;
+            int miny = INT_MAX;
+            for(int j=i;j<n;j++)
+            {
+                maxy = max(maxy,nums[j]);
+                miny = min(miny,nums[j]);
+                sum = sum + (maxy-miny);
+            }
+        }
+        return sum;
+}*/
